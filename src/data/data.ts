@@ -19,7 +19,7 @@ export const navItems = [
 ]
 
 export const heroData = {
-  heading: "Onpoint",
+  heading: "OnPoint",
   subheading: " seamless POS solutions. ",
   description: "Trusted POS solution tailored to the needs of all kinds of businesses in the Philippines—small, medium, and beyond—backed by 24/7 support, 7 days a week.",
   buttons: {
@@ -33,8 +33,8 @@ export const heroData = {
     },
   },
   image: {
-    src: "/images/Tablet.jpg",
-    alt: "tablet content",
+    src: "/images/POS.jpg",
+    alt: "POS content",
   },
 }
 

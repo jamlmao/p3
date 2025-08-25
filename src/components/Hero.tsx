@@ -1,81 +1,78 @@
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
+import { ArrowUpRight, CirclePlay } from "lucide-react";
 import {heroData} from '../data/data'
-import Link from "next/link";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalTrigger,
+} from "@/components/ui/animated-modal";
 import Image from "next/image";
+
+
+
 
 const HeroSection = () => {
     return (
-     <section className="px-[5%] py-16 md:py-24 bg-background border border-red">
+       <section className="overflow-x-hidden w-full">
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="max-w-screen-xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12 lg:py-0">
+                    <div className="my-auto">
+                        <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold !leading-[1.2] tracking-tight ">
+                           <span className="font-bold text-blue-800">{heroData.heading}</span> {heroData.subheading}
+                        </h1>
+                        <p className="mt-6 max-w-[60ch] text-lg">
+                           {heroData.description}
+                        </p>
+                        <div className="mt-12 flex items-center gap-4 ">
+                            
+                            <Button size="lg" className="rounded-full text-base uppercase">
+                               {heroData.buttons.primary.text}<ArrowUpRight className="!h-5 !w-5" />
+                            </Button>
+                            <Modal>
+                                <ModalTrigger className="bg-white dark:bg-dark dark:text-white text-blue-800 flex justify-center group/modal-btn border border-blue-800 dark:border-white rounded-full">
+                                    <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 uppercase">
+                                       Watch Demo
+                                    </span>
+                                       
+                                    <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-blue-800 z-20 dark:text-white">
+                                        <CirclePlay className="!h-5 !w-5" />
+                                    </div>
+                                </ModalTrigger>
+                                <ModalBody>
+                                   <ModalContent className="items-center">
+                                      <iframe 
+                                        src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F786223680606415%2F&show_text=false&width=267&t=0" 
+                                        width="267" 
+                                        height="476" 
+                                        scrolling="no" 
+                                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                        className="rounded-lg" 
+                                    >
+                                    </iframe>
+                                    </ModalContent>
+                                </ModalBody>
+                              
 
-        <div className="container flex flex-col items-center gap-10 lg:my-0 lg:flex-row mx-auto w-full max-w-screen-lg">
-
-            <div className="flex flex-col gap-7 lg:w-2/3">
-
-                <h2 className="text-5xl font-semibold text-foreground md:text-5xl lg:text-7xl">
-                   <span className="text-blue-800">{heroData.heading}</span> 
-                   <span className="text-gray-800">{heroData.subheading}</span>
-                </h2>
-
-                <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
-                    {heroData.description}
-                </p>
-
-                <div className="flex flex-wrap items-start gap-5 lg:gap-7">
-
-                    <Button asChild className="bg-blue-800 hover:bg-blue-700 uppercase">
-                        <Link
-                            href={heroData.buttons?.primary?.url}
-                            className="flex items-center group"
-                        >
-                            <span className="pr-6 pl-4 text-sm whitespace-nowrap lg:pr-8 lg:pl-6 lg:text-base">
-                                {heroData.buttons.primary?.text}
-                            </span>
-                            <ChevronRight className="size-4 lg:size-5 hidden group-hover:inline" />
-                        </Link>
-                    </Button>
-
-                    <Button asChild variant="link" className="underline uppercase hover:no-underline">
-                        <Link
-                            href={heroData.buttons?.secondary?.url}
-                            className="flex items-center px-4 py-2 rounded-md transition-all duration-200 hover:bg-gray-700 hover:text-white group"
-                        >
-                            {heroData.buttons.secondary?.text}
-                            <ChevronRight className="size-4 lg:size-5 hidden group-hover:inline ml-2" />
-                        </Link>
-                    </Button>
-
+                            </Modal>
+                          
+                        </div>
+                    </div>
+                    <div className="relative w-full aspect-video lg:aspect-auto lg:w-[1000px] lg:h-[calc(100vh-10rem)] bg-accent rounded-xl" >
+                        <Image
+                            src={heroData.image.src}
+                            alt={heroData.image.alt}
+                            fill
+                            className="object-cover rounded-xl"
+                            priority
+                        />
+                    </div>
                 </div>
-
             </div>
-
-            <div className="relative z-10">
-               <div className="absolute inset-0 z-0 rounded-[35px] overflow-hidden">
-                    <Image
-                        fill
-                        src={heroData.image.src}
-                        alt={heroData.image.alt}
-                        className="object-cover w-full h-full"
-                        style={{ borderRadius: 45 }}
-                    />
-                </div>
-                <Image
-                    src="/images/tabletframe.png"
-                    width={500}
-                    height={320}
-                    alt="tablet frame"
-                    className="relative z-10 pointer-events-none select-none"
-                    draggable={false}
-                />
-            </div>
-            
-
-
-
-        </div>
-
-     </section>
-    )
+        </section>
+        );
 }
 
 
