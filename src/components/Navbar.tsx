@@ -2,30 +2,32 @@
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import {navItems} from '../data/data'
 import Image from 'next/image'
 
 const Navbar = () => {
-  const [navState, setNavState] = React.useState(false)
-  const [isScrolled, setIsScrolled] = React.useState(false)
+  const [navState, setNavState] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
-  React.useEffect(() => {
-    
+  useEffect(() => {
     const handleScroll = () => {
         setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll',handleScroll)
+  
     return () => window.removeEventListener('scroll',handleScroll)
    },[])
 
   return (
-    <header className='border border-red'>
+    <header>
         <nav data-state={navState && 'active'} className='fixed z-20 w-full px-2 '>
-            <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12',isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
-                <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+            <div className={cn(
+                'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 will-change-transform', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5',
+                )}>
+                <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4 ">
                     <div className="flex w-full justify-between lg:w-auto items-center gap-6">
                         <Link 
                             href='/'

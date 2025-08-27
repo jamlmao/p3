@@ -1,8 +1,13 @@
+import {ChartSpline,Clock,Cog,Zap} from "lucide-react";
 
 export const navItems = [
   {
     title: 'Home',
     href: '/',
+  },
+  {
+    title: 'Services',
+    href: '#services',
   },
   {
     title: 'About',
@@ -11,10 +16,6 @@ export const navItems = [
   {
     title: 'Contact',
     href: '#contact',
-  },
-  {
-    title: 'Services',
-    href: '#services',
   }
 ]
 
@@ -24,7 +25,7 @@ export const heroData = {
   description: "Trusted POS solution tailored to the needs of all kinds of businesses in the Philippines—small, medium, and beyond—backed by 24/7 support, 7 days a week.",
   buttons: {
     primary: {
-      text: "Service we provide",
+      text: "Inquire Now",
       url: "#",
     },
     secondary: {
@@ -38,4 +39,25 @@ export const heroData = {
   },
 }
 
-
+export const servicesData =[
+  {
+    icon:ChartSpline,
+    title: "All in One Dashboard" ,
+    description: "Oversee sales, inventory, and staff from a single hub"
+  },
+  {
+    icon:Zap,
+    title:"Instant Reports",
+    description: "Access real-time insights without the hassle of manual logs"
+  },
+  {
+    icon: Cog,
+    title:"Quick and Simple Setup",
+    description: "Be up and running in minutes - no technical expertise required"
+  },
+  {
+    icon:Clock,
+    title:"24/7 Support",
+    description: "Get help via video call or let our team assist you onsite"
+  }
+]
