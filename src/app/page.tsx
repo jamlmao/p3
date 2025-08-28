@@ -13,6 +13,16 @@ export default function Home() {
       <div className="h-screen w-screen  items-center">
         <HeroSection />
         <Services />
+        {/*  
+          About with stat
+          content or other information for advertising or something like a hero component
+          pricing
+          testimonials
+          logocloud
+          faqs
+          contact
+          footer
+        */}
         <LogoCloud />
         <CallToAction />
       </div>
