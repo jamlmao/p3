@@ -1,16 +1,20 @@
-import CTABanner from "@/components/CTA";
+import CallToAction from "@/components/CTA";
 import HeroSection from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
+import LogoCloud from "@/components/LogoCloud"
+
+
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="h-screen w-screen">
+      <div className="h-screen w-screen  items-center">
         <HeroSection />
         <Services />
-        <CTABanner />
+        <LogoCloud />
+        <CallToAction />
       </div>
     </>
   );

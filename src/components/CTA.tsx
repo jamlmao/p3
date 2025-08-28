@@ -1,56 +1,88 @@
-import { ArrowUpRight, Forward } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
-import { AnimatedGridPattern } from "./magicui/animated-grid-pattern";
+import Image from "next/image";
+import { section } from "motion/react-client";
 
-const CTABanner = () => {
+const CallToAction = () => {
   return (
-        <div className="px-6">
-            <div className="dark:border relative overflow-hidden my-20 w-full bg-background text-foreground max-w-screen-lg mx-auto rounded-2xl py-10 md:py-16 px-6 md:px-14 border border-foreground/10 shadow-lg">
-                <AnimatedGridPattern
-                    numSquares={30}
-                    maxOpacity={0.1}
-                    duration={3}
-                    className={cn(
-                        "[mask-image:radial-gradient(400px_circle_at_right,white,rgba(20, 23, 218, 0.6),transparent)]",
-                        "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
-                    )}
-                />
-                <AnimatedGridPattern
-                    numSquares={30}
-                    maxOpacity={0.1}
-                    duration={3}
-                    className={cn(
-                        "[mask-image:radial-gradient(400px_circle_at_top_left,white,rgba(20, 23, 218, 0.6),transparent)]",
-                        "inset-x-0 inset-y-0 h-[200%] skew-y-12"
-                    )}
-                />
-                    <div className="relative z-0 flex flex-col gap-3">
-                    <h3 className="text-3xl md:text-4xl font-semibold text-blue-800">
+    <section>
+        <div className="w-full py-8 bg-blue-800 sm:py-12 md:py-16 ">
+            <div className="container border shadow-lg dark:shadow-foreground/10 mx-auto p-12 rounded-md bg-white sm:px-16 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+                <div className="w-full md:max-w-md mb-12 md:mb-0 text-center md:text-left">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                         Discover Seamless POS Solutions
-                    </h3>
-                    <p className="mt-2 text-base md:text-lg">
+                    </h2>
+
+                    <p className="text-neutral-500 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
                         Empower your business with trusted POS solutions tailored to meet
                         the needs of small, medium, and large enterprises. Backed by
                         24/7 support, our services ensure smooth operations and hassle-free
                         management.
                     </p>
+                    <Button size="lg" className="bg-blue-800 hover:bg-blue-700 w-full sm:w-auto">
+                        Get Started <ArrowUpRight className="!h-5 !w-5 ml-1" />
+                    </Button>
                 </div>
 
-                <div className="relative z-0 mt-14 flex flex-col sm:flex-row gap-4">
-
-                    <Button size="lg" className="bg-blue-800 hover:bg-blue-700">
-                        Get Started <ArrowUpRight className="!h-5 !w-5" />
-                    </Button>
-
-                    <Button size="lg" variant="outline">
-                        Discover Features <Forward className="!h-5 !w-5" />
-                    </Button>
-
+                {/* Right content - Image container with group hover for both images */}
+                <div className="group relative w-full md:w-1/2 h-60 sm:h-72 md:h-80 mt-4 md:mt-0">
+                    {/* Background tilted image */}
+                    <div className="absolute right-4 bottom-0 w-3/4 h-full bg-white rounded-t-lg shadow-lg transform rotate-6 overflow-hidden cursor-pointer transition-all duration-500 group-hover:rotate-3">
+                        {/* First image (default visible) */}
+                        <div className="w-full h-full transition-opacity duration-500 group-hover:opacity-0">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="People using POS system"
+                                fill
+                                sizes="(max-width: 768px) 75vw, 33vw"
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                        
+                        {/* Second image (appears on hover) */}
+                        <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="POS system closeup"
+                                fill
+                                sizes="(max-width: 768px) 75vw, 33vw"
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
+                
+                    {/* Foreground image */}
+                    <div className="absolute right-0 bottom-0 w-3/4 h-full bg-white rounded-t-lg shadow-lg overflow-hidden cursor-pointer transition-all duration-500 group-hover:translate-y-2">
+                        {/* First image (default visible) */}
+                        <div className="w-full h-full transition-opacity duration-500 group-hover:opacity-0">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="POS system closeup"
+                                fill
+                                sizes="(max-width: 768px) 75vw, 33vw"
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
+                        
+                        {/* Second image (appears on hover) */}
+                        <div className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="People using POS system"
+                                fill
+                                sizes="(max-width: 768px) 75vw, 33vw"
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    
   );
-}
+};
 
-export default CTABanner
+export default CallToAction;

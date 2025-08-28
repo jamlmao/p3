@@ -1,4 +1,4 @@
-import {ChartSpline,Clock,Cog,Zap} from "lucide-react";
+import {ChartSpline,Clock,Cog,Package,Smartphone,Zap} from "lucide-react";
 
 export const navItems = [
   {
@@ -59,5 +59,15 @@ export const servicesData =[
     icon:Clock,
     title:"24/7 Support",
     description: "Get help via video call or let our team assist you onsite"
+  },
+  {
+    icon: Package,
+    title: "Smart Inventory Control",
+    description: "Automatically track stock levels and get low inventory alerts"
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile POS",
+    description: "Take payments and manage your business from any mobile device"
   }
 ]
