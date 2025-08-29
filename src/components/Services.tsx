@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 
 const Services = () => {
     return(
-      <section id="#services" className="px-[5%] py-16 md:py-24">
+      <section id="#services" className="px-[5%] py-16 md:py-24 bg-accent">
         <div className="min-h-screen flex items-center justify-center">
             <div className="max-w-screen-lg w-full py-10 px-6">
                 <h2 className="text-4xl md:text-5xl md:leading-[3.5rem] font-bold tracking-tight sm:max-w-xl sm:text-center sm:mx-auto">

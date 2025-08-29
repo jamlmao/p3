@@ -1,4 +1,6 @@
-export const Logo01 = () => (
+import { SVGProps } from 'react';
+
+export const Logo01 = (props: SVGProps<SVGSVGElement>) => (
   <svg
     id="logo-87"
     width="202"
@@ -6,6 +8,7 @@ export const Logo01 = () => (
     viewBox="0 0 202 40"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path
       fillRule="evenodd"
