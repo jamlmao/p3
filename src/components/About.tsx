@@ -1,7 +1,6 @@
 import React from 'react'
 import { Logo01 } from "@/components/logo";
 import Image from 'next/image'
-import TestimonialsSection from './Testimonials';
 
 const AboutPage = () => {
 

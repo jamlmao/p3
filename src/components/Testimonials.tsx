@@ -2,7 +2,7 @@ import { Testimonials } from "@/data/data";
 import { Marquee } from "./ui/marquee";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { Facebook, FacebookIcon } from "lucide-react";
+
 import Link from "next/link";
 import React, { ComponentProps } from "react";
 

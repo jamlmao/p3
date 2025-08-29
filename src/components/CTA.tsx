@@ -1,7 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { section } from "motion/react-client";
 
 const CallToAction = () => {
   return (

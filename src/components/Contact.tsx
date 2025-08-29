@@ -13,7 +13,7 @@ const ContactSection = () => {
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Contact Us</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Have questions or ready to transform your business? We'd love to hear from you.
+            Have questions or ready to transform your business? We&apos;d love to hear from you.
           </p>
         </div>
 
