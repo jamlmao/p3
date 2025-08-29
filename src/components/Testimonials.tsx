@@ -10,24 +10,26 @@ import React, { ComponentProps } from "react";
 
 const TestimonialsSection = () => {
     return (
-
-        <div id="testimonials" className="flex justify-center items-center py-20">
-            <div className="h-full w-full">
-                <h2 className="mb-12 text-4xl md:text-5xl font-bold text-center tracking-tight px-6 text-blue-800">
-                    What Our Clients Say
-                </h2>
-                <div className="relative">
-                    <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-gradient-to-r from-background to-transparent" />
-                    <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-gradient-to-l from-background to-transparent" />
-                    <Marquee pauseOnHover className="[--duration:20s]">
-                        <TestimonialList />
-                    </Marquee>
-                    <Marquee pauseOnHover reverse className="mt-0 [--duration:20s]">
-                        <TestimonialList />
-                    </Marquee>
+        <section className="px-[5%] py-16 md:py-24"> 
+            <div id="testimonials" className="flex justify-center items-center py-20">
+                <div className="h-full w-full">
+                    <h2 className="mb-12 text-4xl md:text-5xl font-bold text-center tracking-tight px-6 text-blue-800">
+                        What Our Clients Say
+                    </h2>
+                    <div className="relative">
+                        <div className="z-10 absolute left-0 inset-y-0 w-[15%] bg-gradient-to-r from-background to-transparent" />
+                        <div className="z-10 absolute right-0 inset-y-0 w-[15%] bg-gradient-to-l from-background to-transparent" />
+                        <Marquee pauseOnHover className="[--duration:20s]">
+                            <TestimonialList />
+                        </Marquee>
+                        <Marquee pauseOnHover reverse className="mt-0 [--duration:20s]">
+                            <TestimonialList />
+                        </Marquee>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
     )
 }
 

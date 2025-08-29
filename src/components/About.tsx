@@ -53,50 +53,46 @@ const AboutPage = () => {
               </div>
               
             </div>
-
         </div>
+        
       </div>
-
       <div className="mt-16 flex items-center justify-center">
-        <div className="w-full bg-blue-800 rounded-2xl overflow-hidden">
-          {/* Background pattern for visual interest */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-white/20"></div>
-            <div className="absolute -bottom-32 -left-16 w-80 h-80 rounded-full bg-white/10"></div>
-          </div>
+          <div className="w-full bg-blue-800 rounded-2xl overflow-hidden">
 
-          <div className="relative mx-auto max-w-5xl px-6 py-8 md:py-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Why OnPoint?</h2>
-            <p className="mt-6 text-lg text-blue-100">Because after switching to us...</p>
-            
-            <div className="mt-8 sm:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 justify-center">
-              {/* Stat 1 */}
-              <div className="group bg-blue-600/40 backdrop-blur-sm rounded-xl px-6 py-8 hover:bg-blue-900/50 transition duration-300">
-                <span className="text-6xl font-bold text-white block">96%</span>
-                <p className="mt-6 text-lg text-blue-100 group-hover:text-white transition">
-                  of users report improved efficiency in managing sales
-                </p>
-              </div>
+            <div className="relative mx-auto max-w-5xl px-6 py-8 md:py-12 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">Why OnPoint?</h2>
+              <p className="mt-6 text-lg text-blue-100">Because after switching to us...</p>
               
-              {/* Stat 2 */}
-              <div className="group bg-blue-600/40 backdrop-blur-sm rounded-xl px-6 py-8 hover:bg-blue-900/50 transition duration-300">
-                <span className="text-6xl font-bold text-white block">95%</span>
-                <p className="mt-6 text-lg text-blue-100 group-hover:text-white transition">
-                  of users report increased sales and customer satisfaction
-                </p>
-              </div>
-              
-              {/* Stat 3 */}
-              <div className="group bg-blue-600/40 backdrop-blur-sm rounded-xl px-6 py-8 hover:bg-blue-900/50 transition duration-300">
-                <span className="text-6xl font-bold text-white block">87%</span>
-                <p className="mt-6 text-lg text-blue-100 group-hover:text-white transition">
-                  of users report deeper insights from their data
-                </p>
+              <div className="mt-8 sm:mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 justify-center">
+                {/* Stat 1 */}
+                <div className="group bg-blue-600/40 backdrop-blur-sm rounded-xl px-6 py-8 hover:bg-blue-900/50 transition duration-300">
+                  <span className="text-6xl font-bold text-white block">96%</span>
+                  <p className="mt-6 text-lg text-blue-100 group-hover:text-white transition">
+                    of users report improved efficiency in managing sales
+                  </p>
+                </div>
+                
+                {/* Stat 2 */}
+                <div className="group bg-blue-600/40 backdrop-blur-sm rounded-xl px-6 py-8 hover:bg-blue-900/50 transition duration-300">
+                  <span className="text-6xl font-bold text-white block">95%</span>
+                  <p className="mt-6 text-lg text-blue-100 group-hover:text-white transition">
+                    of users report increased sales and customer satisfaction
+                  </p>
+                </div>
+                
+                {/* Stat 3 */}
+                <div className="group bg-blue-600/40 backdrop-blur-sm rounded-xl px-6 py-8 hover:bg-blue-900/50 transition duration-300">
+                  <span className="text-6xl font-bold text-white block">87%</span>
+                  <p className="mt-6 text-lg text-blue-100 group-hover:text-white transition">
+                    of users report deeper insights from their data
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+      
 
     </section>
   )
